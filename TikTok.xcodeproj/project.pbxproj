@@ -10,9 +10,9 @@
 		02096AC52A6A41A70078374F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02096AC42A6A41A70078374F /* AppDelegate.swift */; };
 		02096AC72A6A41A70078374F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02096AC62A6A41A70078374F /* SceneDelegate.swift */; };
 		02096AC92A6A41A70078374F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02096AC82A6A41A70078374F /* ViewController.swift */; };
-		02096ACC2A6A41A70078374F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02096ACA2A6A41A70078374F /* Main.storyboard */; };
 		02096ACE2A6A41A80078374F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02096ACD2A6A41A80078374F /* Assets.xcassets */; };
 		02096AD12A6A41A80078374F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02096ACF2A6A41A80078374F /* LaunchScreen.storyboard */; };
+		02096ADB2A6A45A00078374F /* Cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 02096ADA2A6A45A00078374F /* Cover.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,11 @@
 		02096AC42A6A41A70078374F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02096AC62A6A41A70078374F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		02096AC82A6A41A70078374F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		02096ACB2A6A41A70078374F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02096ACD2A6A41A80078374F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02096AD02A6A41A80078374F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02096AD22A6A41A80078374F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02096AD82A6A45210078374F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		02096ADA2A6A45A00078374F /* Cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cover.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +41,8 @@
 		02096AB82A6A41A70078374F = {
 			isa = PBXGroup;
 			children = (
+				02096AD82A6A45210078374F /* README.md */,
+				02096AD92A6A45840078374F /* img */,
 				02096AC32A6A41A70078374F /* TikTok */,
 				02096AC22A6A41A70078374F /* Products */,
 			);
@@ -59,12 +62,19 @@
 				02096AC42A6A41A70078374F /* AppDelegate.swift */,
 				02096AC62A6A41A70078374F /* SceneDelegate.swift */,
 				02096AC82A6A41A70078374F /* ViewController.swift */,
-				02096ACA2A6A41A70078374F /* Main.storyboard */,
 				02096ACD2A6A41A80078374F /* Assets.xcassets */,
 				02096ACF2A6A41A80078374F /* LaunchScreen.storyboard */,
 				02096AD22A6A41A80078374F /* Info.plist */,
 			);
 			path = TikTok;
+			sourceTree = "<group>";
+		};
+		02096AD92A6A45840078374F /* img */ = {
+			isa = PBXGroup;
+			children = (
+				02096ADA2A6A45A00078374F /* Cover.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +136,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				02096AD12A6A41A80078374F /* LaunchScreen.storyboard in Resources */,
+				02096ADB2A6A45A00078374F /* Cover.png in Resources */,
 				02096ACE2A6A41A80078374F /* Assets.xcassets in Resources */,
-				02096ACC2A6A41A70078374F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +157,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		02096ACA2A6A41A70078374F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02096ACB2A6A41A70078374F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		02096ACF2A6A41A80078374F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -290,16 +292,16 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TikTok/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.fibeapp.TikTok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -318,16 +320,16 @@
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TikTok/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.fibeapp.TikTok;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

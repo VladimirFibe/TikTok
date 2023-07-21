@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  TikTok
-//
-//  Created by Vladimir Fibe on 21.07.2023.
-//
-
 import UIKit
 
 @main
