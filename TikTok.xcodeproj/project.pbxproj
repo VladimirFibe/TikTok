@@ -16,6 +16,10 @@
 		02096AE32A6A49F10078374F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02096AE22A6A49F10078374F /* BaseViewController.swift */; };
 		02096AE52A6A4ACE0078374F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02096AE42A6A4ACE0078374F /* MainViewController.swift */; };
 		02096AE72A6A4E220078374F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02096AE62A6A4E220078374F /* GoogleService-Info.plist */; };
+		02B0B5E42A6A87760057455C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0B5E32A6A87760057455C /* StorageManager.swift */; };
+		02B0B5E62A6A88210057455C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0B5E52A6A88210057455C /* DatabaseManager.swift */; };
+		02B0B5E82A6A88AC0057455C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0B5E72A6A88AC0057455C /* AuthManager.swift */; };
+		02B0B5EA2A6A89470057455C /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0B5E92A6A89470057455C /* HapticsManager.swift */; };
 		868D10F7A1AB9FBB30A76B1F /* Pods_TikTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97EFA2075DD4092B4BA70E4 /* Pods_TikTok.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,10 @@
 		02096AE22A6A49F10078374F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		02096AE42A6A4ACE0078374F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		02096AE62A6A4E220078374F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02B0B5E32A6A87760057455C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		02B0B5E52A6A88210057455C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		02B0B5E72A6A88AC0057455C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		02B0B5E92A6A89470057455C /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		71759A68B8F3BD5DA24F623F /* Pods-TikTok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.debug.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.debug.xcconfig"; sourceTree = "<group>"; };
 		9EDCDC64B406B720D49A96C2 /* Pods-TikTok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.release.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.release.xcconfig"; sourceTree = "<group>"; };
 		C97EFA2075DD4092B4BA70E4 /* Pods_TikTok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +80,7 @@
 		02096AC32A6A41A70078374F /* TikTok */ = {
 			isa = PBXGroup;
 			children = (
+				02B0B5E22A6A875A0057455C /* Managers */,
 				02096AE02A6A49A80078374F /* Core */,
 				02096ADD2A6A49190078374F /* Supporting Files */,
 				02096ADC2A6A49120078374F /* App */,
@@ -139,6 +148,17 @@
 				02096AE22A6A49F10078374F /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		02B0B5E22A6A875A0057455C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				02B0B5E32A6A87760057455C /* StorageManager.swift */,
+				02B0B5E52A6A88210057455C /* DatabaseManager.swift */,
+				02B0B5E72A6A88AC0057455C /* AuthManager.swift */,
+				02B0B5E92A6A89470057455C /* HapticsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		5EF3FE96293DA0A9982AA299 /* Pods */ = {
@@ -274,11 +294,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B0B5EA2A6A89470057455C /* HapticsManager.swift in Sources */,
 				02096AC92A6A41A70078374F /* HomeViewController.swift in Sources */,
+				02B0B5E82A6A88AC0057455C /* AuthManager.swift in Sources */,
 				02096AE32A6A49F10078374F /* BaseViewController.swift in Sources */,
 				02096AC52A6A41A70078374F /* AppDelegate.swift in Sources */,
+				02B0B5E42A6A87760057455C /* StorageManager.swift in Sources */,
 				02096AC72A6A41A70078374F /* SceneDelegate.swift in Sources */,
 				02096AE52A6A4ACE0078374F /* MainViewController.swift in Sources */,
+				02B0B5E62A6A88210057455C /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
