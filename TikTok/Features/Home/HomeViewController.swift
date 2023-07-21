@@ -6,7 +6,6 @@ extension HomeViewController {
     override func setupViews() {
         super.setupViews()
         title = "Home"
-        HapticsManager.shared.
     }
 }
 
