@@ -15,6 +15,7 @@
 		02096ADB2A6A45A00078374F /* Cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 02096ADA2A6A45A00078374F /* Cover.png */; };
 		02096AE32A6A49F10078374F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02096AE22A6A49F10078374F /* BaseViewController.swift */; };
 		02096AE52A6A4ACE0078374F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02096AE42A6A4ACE0078374F /* MainViewController.swift */; };
+		02096AE72A6A4E220078374F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02096AE62A6A4E220078374F /* GoogleService-Info.plist */; };
 		868D10F7A1AB9FBB30A76B1F /* Pods_TikTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C97EFA2075DD4092B4BA70E4 /* Pods_TikTok.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		02096ADA2A6A45A00078374F /* Cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cover.png; sourceTree = "<group>"; };
 		02096AE22A6A49F10078374F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		02096AE42A6A4ACE0078374F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		02096AE62A6A4E220078374F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71759A68B8F3BD5DA24F623F /* Pods-TikTok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.debug.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.debug.xcconfig"; sourceTree = "<group>"; };
 		9EDCDC64B406B720D49A96C2 /* Pods-TikTok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTok.release.xcconfig"; path = "Target Support Files/Pods-TikTok/Pods-TikTok.release.xcconfig"; sourceTree = "<group>"; };
 		C97EFA2075DD4092B4BA70E4 /* Pods_TikTok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 			children = (
 				02096ACD2A6A41A80078374F /* Assets.xcassets */,
 				02096ACF2A6A41A80078374F /* LaunchScreen.storyboard */,
+				02096AE62A6A4E220078374F /* GoogleService-Info.plist */,
 				02096AD22A6A41A80078374F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -144,7 +147,6 @@
 				71759A68B8F3BD5DA24F623F /* Pods-TikTok.debug.xcconfig */,
 				9EDCDC64B406B720D49A96C2 /* Pods-TikTok.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -167,6 +169,7 @@
 				02096ABD2A6A41A70078374F /* Sources */,
 				02096ABE2A6A41A70078374F /* Frameworks */,
 				02096ABF2A6A41A70078374F /* Resources */,
+				A34DBE05AE6D16DF15B6BE12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02096AD12A6A41A80078374F /* LaunchScreen.storyboard in Resources */,
+				02096AE72A6A4E220078374F /* GoogleService-Info.plist in Resources */,
 				02096ADB2A6A45A00078374F /* Cover.png in Resources */,
 				02096ACE2A6A41A80078374F /* Assets.xcassets in Resources */,
 			);
@@ -244,6 +248,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A34DBE05AE6D16DF15B6BE12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTok/Pods-TikTok-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTok/Pods-TikTok-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikTok/Pods-TikTok-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -397,6 +418,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 723HTEFHBA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TikTok/Info.plist;
@@ -405,6 +427,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,6 +457,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
