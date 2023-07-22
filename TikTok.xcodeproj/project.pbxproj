@@ -16,6 +16,8 @@
 		02096AE32A6A49F10078374F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02096AE22A6A49F10078374F /* BaseViewController.swift */; };
 		02096AE52A6A4ACE0078374F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02096AE42A6A4ACE0078374F /* MainViewController.swift */; };
 		02096AE72A6A4E220078374F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02096AE62A6A4E220078374F /* GoogleService-Info.plist */; };
+		0285631A2A6AEB820022C49E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028563192A6AEB820022C49E /* PostViewController.swift */; };
+		0285631C2A6AEB9B0022C49E /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0285631B2A6AEB9B0022C49E /* PostModel.swift */; };
 		02B0B5E42A6A87760057455C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0B5E32A6A87760057455C /* StorageManager.swift */; };
 		02B0B5E62A6A88210057455C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0B5E52A6A88210057455C /* DatabaseManager.swift */; };
 		02B0B5E82A6A88AC0057455C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0B5E72A6A88AC0057455C /* AuthManager.swift */; };
@@ -37,6 +39,8 @@
 		02096AE22A6A49F10078374F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		02096AE42A6A4ACE0078374F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		02096AE62A6A4E220078374F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		028563192A6AEB820022C49E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		0285631B2A6AEB9B0022C49E /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		02B0B5E32A6A87760057455C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		02B0B5E52A6A88210057455C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		02B0B5E72A6A88AC0057455C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		02096ADF2A6A49430078374F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				028563182A6AEB710022C49E /* Post */,
 				02096ADE2A6A493C0078374F /* Home */,
 			);
 			path = Features;
@@ -151,6 +156,15 @@
 				02096AE22A6A49F10078374F /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		028563182A6AEB710022C49E /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				028563192A6AEB820022C49E /* PostViewController.swift */,
+				0285631B2A6AEB9B0022C49E /* PostModel.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		02B0B5E22A6A875A0057455C /* Managers */ = {
@@ -306,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02B0B5EA2A6A89470057455C /* HapticsManager.swift in Sources */,
+				0285631C2A6AEB9B0022C49E /* PostModel.swift in Sources */,
 				02096AC92A6A41A70078374F /* HomeViewController.swift in Sources */,
 				02B0B5E82A6A88AC0057455C /* AuthManager.swift in Sources */,
 				02096AE32A6A49F10078374F /* BaseViewController.swift in Sources */,
@@ -315,6 +330,7 @@
 				02096AC72A6A41A70078374F /* SceneDelegate.swift in Sources */,
 				02096AE52A6A4ACE0078374F /* MainViewController.swift in Sources */,
 				02B0B5E62A6A88210057455C /* DatabaseManager.swift in Sources */,
+				0285631A2A6AEB820022C49E /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
