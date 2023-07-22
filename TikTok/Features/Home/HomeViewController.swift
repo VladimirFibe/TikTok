@@ -2,6 +2,7 @@ import UIKit
 
 class HomeViewController: BaseViewController {
     private let horizontalScrollView = UIScrollView()
+    private let headerButtons = UISegmentedControl(items: ["Following", "For You"])
 
     private let followingnPageViewController = UIPageViewController(
         transitionStyle: .scroll,
@@ -23,22 +24,37 @@ class HomeViewController: BaseViewController {
         horizontalScrollView.frame = view.bounds
     }
 }
+// MARK: - Actions
+extension HomeViewController {
+    @objc private func didChangeSegmentControl(_ sender: UISegmentedControl) {
+        horizontalScrollView.setContentOffset(
+            CGPoint(x: view.width * CGFloat(sender.selectedSegmentIndex), y: 0),
+            animated: true)
+    }
+}
+// MARK: - Setup Views
 extension HomeViewController {
     override func setupViews() {
         super.setupViews()
-        title = "Home"
         setupHorizontalScrollView()
         setupFollowingnPageViewController()
         setupForYouPageViewController()
+        setupHeaderButtons()
+    }
+    
+    private func setupHeaderButtons() {
+        headerButtons.selectedSegmentIndex = 1
+        headerButtons.addTarget(self, action: #selector(didChangeSegmentControl), for: .valueChanged)
+        navigationItem.titleView = headerButtons
     }
     
     private func setupHorizontalScrollView() {
         view.addSubview(horizontalScrollView)
         horizontalScrollView.bounces = false
         horizontalScrollView.showsHorizontalScrollIndicator = false
-        horizontalScrollView.backgroundColor = .red
         horizontalScrollView.contentSize = CGSize(width: view.width * 2, height: view.height)
         horizontalScrollView.isPagingEnabled = true
+        horizontalScrollView.delegate = self
         horizontalScrollView.contentOffset = CGPoint(x: view.width, y: 0)
     }
     
@@ -100,5 +116,11 @@ extension HomeViewController: UIPageViewControllerDataSource {
     }
     var currentPosts: [PostModel] {
         horizontalScrollView.contentOffset.x == 0 ? followingPosts : forYouPosts
+    }
+}
+// MARK: - UIScrollViewDelegate
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        headerButtons.selectedSegmentIndex = scrollView.contentOffset.x < (view.width / 2) ? 0 : 1
     }
 }

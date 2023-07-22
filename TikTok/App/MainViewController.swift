@@ -16,6 +16,9 @@ extension MainViewController {
         let camera = UINavigationController(rootViewController: BaseViewController())
         let notifications = UINavigationController(rootViewController: BaseViewController())
         let profile = UINavigationController(rootViewController: BaseViewController())
+        home.navigationBar.backgroundColor = .clear
+        home.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        home.navigationBar.shadowImage = UIImage()
         home.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house"), tag: 0)
         explore.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "globe.central.south.asia.fill"), tag: 1)
         camera.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "camera"), tag: 2)
