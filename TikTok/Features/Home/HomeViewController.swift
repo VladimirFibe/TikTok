@@ -61,6 +61,7 @@ extension HomeViewController {
     private func setupFollowingnPageViewController() {
         guard let model = followingPosts.first else { return }
         let controller = PostViewController(model: model)
+        controller.delegate = self
         followingnPageViewController.setViewControllers(
             [controller],
             direction: .forward,
@@ -79,6 +80,7 @@ extension HomeViewController {
     private func setupForYouPageViewController() {
         guard let model = forYouPosts.first else { return }
         let controller = PostViewController(model: model)
+        controller.delegate = self
         forYouPageViewController.setViewControllers(
             [controller],
             direction: .forward,
@@ -94,6 +96,7 @@ extension HomeViewController {
         forYouPageViewController.didMove(toParent: self)
     }
 }
+// MARK: - UIPageViewControllerDataSource
 extension HomeViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let fromPost = (viewController as? PostViewController)?.model,
@@ -102,6 +105,7 @@ extension HomeViewController: UIPageViewControllerDataSource {
         else { return nil}
         let model = currentPosts[index - 1]
         let controller = PostViewController(model: model)
+        controller.delegate = self
         return controller
     }
     
@@ -112,6 +116,7 @@ extension HomeViewController: UIPageViewControllerDataSource {
         else { return nil}
         let model = currentPosts[index + 1]
         let controller = PostViewController(model: model)
+        controller.delegate = self
         return controller
     }
     var currentPosts: [PostModel] {
@@ -122,5 +127,48 @@ extension HomeViewController: UIPageViewControllerDataSource {
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         headerButtons.selectedSegmentIndex = scrollView.contentOffset.x < (view.width / 2) ? 0 : 1
+    }
+}
+// MARK: - PostViewControllerDelegate
+extension HomeViewController: PostViewControllerDelegate {
+    func postViewController(_ controller: PostViewController, didTapCommentButtonFor post: PostModel) {
+        horizontalScrollView.isScrollEnabled = false
+        if horizontalScrollView.contentOffset.x == 0 {
+            followingnPageViewController.dataSource = nil
+        } else {
+            forYouPageViewController.dataSource = nil
+        }
+        headerButtons.isEnabled = false
+        let controller = CommentsViewController(post: post)
+        controller.delegate = self
+        addChild(controller)
+        controller.didMove(toParent: self)
+        view.addSubview(controller.view)
+        let frame = CGRect(x: 0, y: view.height, width: view.width, height: view.height * 0.75)
+        controller.view.frame = frame
+        UIView.animate(withDuration: 0.2) {
+            controller.view.frame = CGRect(x: 0, y: self.view.height - frame.height, width: frame.width, height: frame.height)
+        }
+    }
+}
+// MARK: - CommentsViewControllerDelegate
+extension HomeViewController: CommentsViewControllerDelegate {
+    func didTapCloseButton(with viewController: CommentsViewController) {
+        let frame = viewController.view.frame
+        UIView.animate(withDuration: 0.2) {
+            viewController.view.frame = CGRect(x: 0, y: self.view.height, width: frame.width, height: frame.height)
+        } completion: {[weak self] done in
+            if done {
+                DispatchQueue.main.async {
+                    guard let self else { return }
+                    viewController.view.removeFromSuperview()
+                    viewController.removeFromParent()
+                    self.horizontalScrollView.isScrollEnabled = true
+                    self.followingnPageViewController.dataSource = self
+                    self.forYouPageViewController.dataSource = self
+                    self.headerButtons.isEnabled = true
+                }
+            }
+        }
     }
 }
