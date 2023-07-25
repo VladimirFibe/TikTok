@@ -1,15 +1,19 @@
 import UIKit
+import AVFoundation
 
 protocol PostViewControllerDelegate: AnyObject {
     func postViewController(_ controller: PostViewController, didTapCommentButtonFor post: PostModel)
+    func postViewController(_ controller: PostViewController, didTapProfileButtonFor post: PostModel)
 }
 final class PostViewController: BaseViewController {
     weak var delegate: PostViewControllerDelegate?
-    
+    var player: AVPlayer?
+    private var playerDidFinishObserver: NSObjectProtocol?
     var model: PostModel
     private let likeButton = UIButton(type: .system)
     private let commetnButton = UIButton(type: .system)
     private let shareButton = UIButton(type: .system)
+    private let profileButton = UIButton(type: .system)
     private let captionLabel = UILabel()
     
     init(model: PostModel) {
@@ -69,15 +73,21 @@ extension PostViewController {
         })
         print(#function, model.isLikedByCurrentUser)
     }
+    
+    @objc private func didTapProfileButton() {
+        delegate?.postViewController(self, didTapProfileButtonFor: model)
+    }
 }
 // MARK: - Setup Views
 extension PostViewController {
     override func setupViews() {
         super.setupViews()
         view.backgroundColor = .black
+        configureVideo()
         setupLikeButton()
         setupCommentButton()
         setupShareButton()
+        setupProfileButton()
         setupDoubleTapToLike()
         setupCaptionLabel()
     }
@@ -110,6 +120,13 @@ extension PostViewController {
         shareButton.addTarget(self, action: #selector(didTapShare), for: .primaryActionTriggered)
     }
     
+    private func setupProfileButton() {
+        view.addSubview(profileButton)
+        profileButton.tintColor = .white
+        profileButton.setBackgroundImage(UIImage(systemName: "person.circle.fill"), for: .normal)
+        profileButton.addTarget(self, action: #selector(didTapProfileButton), for: .primaryActionTriggered)
+    }
+    
     private func setupCaptionLabel() {
         view.addSubview(captionLabel)
         captionLabel.textColor = .white
@@ -119,13 +136,34 @@ extension PostViewController {
         captionLabel.font = .systemFont(ofSize: 26)
     }
 
+    private func configureVideo() {
+        guard let path = Bundle.main.path(forResource: "video", ofType: "mp4")
+        else { return }
+        let url = URL(filePath: path)
+        player = AVPlayer(url: url)
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = view.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(playerLayer)
+        player?.volume = 0.5
+        player?.play()
+        guard let player else { return }
+        playerDidFinishObserver = NotificationCenter.default.addObserver(
+            forName: .AVPlayerItemDidPlayToEndTime,
+            object: player.currentItem,
+            queue: .main,
+            using: { _ in
+                player.seek(to: .zero)
+                player.play()
+            })
+    }
 }
 // MARK: - Setup Frames
 extension PostViewController {
     override func setupFrames() {
         let height = 55.0
         let yStart = view.height - height * 10
-        for (index, button) in [likeButton, commetnButton, shareButton].enumerated() {
+        for (index, button) in [likeButton, commetnButton, shareButton, profileButton].enumerated() {
             button.frame = CGRect(x: view.width - height - 5,
                                   y: yStart + height * CGFloat(index),
                                   width: height,

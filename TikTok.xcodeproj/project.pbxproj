@@ -22,6 +22,17 @@
 		02598ACD2A6CD6D400BB2ACD /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02598ACC2A6CD6D400BB2ACD /* CommentTableViewCell.swift */; };
 		02598ACF2A6CDA5B00BB2ACD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02598ACE2A6CDA5B00BB2ACD /* String+Extension.swift */; };
 		02598AD12A6CDAA800BB2ACD /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02598AD02A6CDAA800BB2ACD /* DateFormatter+Extension.swift */; };
+		026ECC912A6EE2A600697757 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026ECC902A6EE2A600697757 /* ProfileViewController.swift */; };
+		026ECC932A6EE48000697757 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 026ECC922A6EE48000697757 /* video.mp4 */; };
+		026ECC962A6EEFFD00697757 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026ECC952A6EEFFD00697757 /* ExploreViewController.swift */; };
+		026ECC992A6F540E00697757 /* ExploreSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026ECC982A6F540E00697757 /* ExploreSection.swift */; };
+		026ECC9B2A6F542C00697757 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026ECC9A2A6F542C00697757 /* ExploreCell.swift */; };
+		026ECC9D2A6F544200697757 /* ExploreSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026ECC9C2A6F544200697757 /* ExploreSectionType.swift */; };
+		026ECC9F2A6F545B00697757 /* ExploreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026ECC9E2A6F545B00697757 /* ExploreResponse.swift */; };
+		026ECCA12A6F548800697757 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026ECCA02A6F548800697757 /* Banner.swift */; };
+		026ECCA52A6F54BE00697757 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026ECCA42A6F54BE00697757 /* Post.swift */; };
+		026ECCA72A6F54E100697757 /* Hashtag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026ECCA62A6F54E100697757 /* Hashtag.swift */; };
+		026ECCA92A6F54F400697757 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026ECCA82A6F54F400697757 /* Creator.swift */; };
 		0285631A2A6AEB820022C49E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028563192A6AEB820022C49E /* PostViewController.swift */; };
 		0285631C2A6AEB9B0022C49E /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0285631B2A6AEB9B0022C49E /* PostModel.swift */; };
 		02B0B5E42A6A87760057455C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0B5E32A6A87760057455C /* StorageManager.swift */; };
@@ -51,6 +62,17 @@
 		02598ACC2A6CD6D400BB2ACD /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		02598ACE2A6CDA5B00BB2ACD /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		02598AD02A6CDAA800BB2ACD /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		026ECC902A6EE2A600697757 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		026ECC922A6EE48000697757 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		026ECC952A6EEFFD00697757 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		026ECC982A6F540E00697757 /* ExploreSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSection.swift; sourceTree = "<group>"; };
+		026ECC9A2A6F542C00697757 /* ExploreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
+		026ECC9C2A6F544200697757 /* ExploreSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreSectionType.swift; sourceTree = "<group>"; };
+		026ECC9E2A6F545B00697757 /* ExploreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreResponse.swift; sourceTree = "<group>"; };
+		026ECCA02A6F548800697757 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		026ECCA42A6F54BE00697757 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		026ECCA62A6F54E100697757 /* Hashtag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hashtag.swift; sourceTree = "<group>"; };
+		026ECCA82A6F54F400697757 /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
 		028563192A6AEB820022C49E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		0285631B2A6AEB9B0022C49E /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		02B0B5E32A6A87760057455C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -98,11 +120,11 @@
 		02096AC32A6A41A70078374F /* TikTok */ = {
 			isa = PBXGroup;
 			children = (
+				02096ADC2A6A49120078374F /* App */,
 				02598AC72A6CC87000BB2ACD /* Models */,
 				02B0B5E22A6A875A0057455C /* Managers */,
 				02096AE02A6A49A80078374F /* Core */,
 				02096ADD2A6A49190078374F /* Supporting Files */,
-				02096ADC2A6A49120078374F /* App */,
 				02096ADF2A6A49430078374F /* Features */,
 			);
 			path = TikTok;
@@ -130,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				02096ACD2A6A41A80078374F /* Assets.xcassets */,
+				026ECC922A6EE48000697757 /* video.mp4 */,
 				02096ACF2A6A41A80078374F /* LaunchScreen.storyboard */,
 				02096AE62A6A4E220078374F /* GoogleService-Info.plist */,
 				02096AD22A6A41A80078374F /* Info.plist */,
@@ -148,6 +171,8 @@
 		02096ADF2A6A49430078374F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				026ECC942A6EEFED00697757 /* Explore */,
+				026ECC8F2A6EE28500697757 /* Profile */,
 				02598AC42A6CB88A00BB2ACD /* Comments */,
 				028563182A6AEB710022C49E /* Post */,
 				02096ADE2A6A493C0078374F /* Home */,
@@ -189,6 +214,38 @@
 				02598ACA2A6CC8C800BB2ACD /* Person.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		026ECC8F2A6EE28500697757 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				026ECC902A6EE2A600697757 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		026ECC942A6EEFED00697757 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				026ECC972A6F53F600697757 /* Model */,
+				026ECC952A6EEFFD00697757 /* ExploreViewController.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		026ECC972A6F53F600697757 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				026ECC982A6F540E00697757 /* ExploreSection.swift */,
+				026ECC9A2A6F542C00697757 /* ExploreCell.swift */,
+				026ECC9C2A6F544200697757 /* ExploreSectionType.swift */,
+				026ECC9E2A6F545B00697757 /* ExploreResponse.swift */,
+				026ECCA02A6F548800697757 /* Banner.swift */,
+				026ECCA42A6F54BE00697757 /* Post.swift */,
+				026ECCA62A6F54E100697757 /* Hashtag.swift */,
+				026ECCA82A6F54F400697757 /* Creator.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		028563182A6AEB710022C49E /* Post */ = {
@@ -298,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02096AD12A6A41A80078374F /* LaunchScreen.storyboard in Resources */,
+				026ECC932A6EE48000697757 /* video.mp4 in Resources */,
 				02096AE72A6A4E220078374F /* GoogleService-Info.plist in Resources */,
 				02096ADB2A6A45A00078374F /* Cover.png in Resources */,
 				02096ACE2A6A41A80078374F /* Assets.xcassets in Resources */,
@@ -362,13 +420,23 @@
 				02096AE32A6A49F10078374F /* BaseViewController.swift in Sources */,
 				02B0B5ED2A6A8F2B0057455C /* UIView+Extensions.swift in Sources */,
 				02598ACF2A6CDA5B00BB2ACD /* String+Extension.swift in Sources */,
+				026ECC912A6EE2A600697757 /* ProfileViewController.swift in Sources */,
 				02598AC92A6CC88200BB2ACD /* PostComment.swift in Sources */,
+				026ECC9B2A6F542C00697757 /* ExploreCell.swift in Sources */,
+				026ECCA72A6F54E100697757 /* Hashtag.swift in Sources */,
 				02096AC52A6A41A70078374F /* AppDelegate.swift in Sources */,
+				026ECC992A6F540E00697757 /* ExploreSection.swift in Sources */,
+				026ECC9F2A6F545B00697757 /* ExploreResponse.swift in Sources */,
+				026ECC962A6EEFFD00697757 /* ExploreViewController.swift in Sources */,
+				026ECC9D2A6F544200697757 /* ExploreSectionType.swift in Sources */,
+				026ECCA92A6F54F400697757 /* Creator.swift in Sources */,
 				02B0B5E42A6A87760057455C /* StorageManager.swift in Sources */,
 				02598ACD2A6CD6D400BB2ACD /* CommentTableViewCell.swift in Sources */,
 				02096AC72A6A41A70078374F /* SceneDelegate.swift in Sources */,
 				02598AD12A6CDAA800BB2ACD /* DateFormatter+Extension.swift in Sources */,
 				02096AE52A6A4ACE0078374F /* MainViewController.swift in Sources */,
+				026ECCA12A6F548800697757 /* Banner.swift in Sources */,
+				026ECCA52A6F54BE00697757 /* Post.swift in Sources */,
 				02B0B5E62A6A88210057455C /* DatabaseManager.swift in Sources */,
 				0285631A2A6AEB820022C49E /* PostViewController.swift in Sources */,
 			);
@@ -519,7 +587,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,7 +617,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

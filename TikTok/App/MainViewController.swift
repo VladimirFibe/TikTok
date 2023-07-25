@@ -12,10 +12,10 @@ class MainViewController: UITabBarController {
 extension MainViewController {
     private func setupControllers() {
         let home = UINavigationController(rootViewController: HomeViewController())
-        let explore = UINavigationController(rootViewController: BaseViewController())
+        let explore = UINavigationController(rootViewController: ExploreViewController())
         let camera = UINavigationController(rootViewController: BaseViewController())
         let notifications = UINavigationController(rootViewController: BaseViewController())
-        let profile = UINavigationController(rootViewController: BaseViewController())
+        let profile = UINavigationController(rootViewController: ProfileViewController(person: Person(id: UUID().uuidString, username: "tiktok", avatar: nil)))
         home.navigationBar.backgroundColor = .clear
         home.navigationBar.setBackgroundImage(UIImage(), for: .default)
         home.navigationBar.shadowImage = UIImage()
