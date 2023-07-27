@@ -1,6 +1,6 @@
 import Foundation
 
-struct Creator: Codable {
+struct Creator: Codable, Hashable {
     let id: String
     let image: String
     let username: String

@@ -1,8 +1,8 @@
 import UIKit
 
 enum ExploreCell: Hashable {
-    case banner(String)
-    case post(String)
-    case hashtag(String)
-    case user(String)
+    case banner(Banner)
+    case post(Post)
+    case hashtag(Hashtag)
+    case user(Creator)
 }
